@@ -1,0 +1,66 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block start %}
+<div class="Mydiv">
+            <h1>Start Today With Us</h1>
+            <h2>We will provide you the best oppurtunities that will change your lives and career</h2>
+</div>    
+<h1 id="head1">All the skills you need in one place
+</h1>
+<h2 id="head2">From critical workplace skills to technical topics, our catalog supports well-rounded professional development.</h2>
+<h3>Trending Courses</h3>
+
+</div>
+<div class="mainbox">
+    {% for i in data %}
+
+    <div class="first_box">
+        <div>
+            <img id="img" src="{% static 'images/' %}{{i.image.name}}" >            
+        </div>
+        <p style="text-align: center; margin-top: 3%;">
+            <a href="/hcourse/{{i.name | slugify}}/{{i.id}}" style="text-decoration: none; color: black; font-size: 15px;">{{i.name}}</a>
+        </p>
+        <h5 style="color: black; text-align: center;">{{i.price}}</h5>
+        
+        <!-- <h5 id="upscc">Rs.25,499</h5> -->
+    </div>
+    {% endfor %}
+</div>
+<div class="start">
+    <h1>Start your preparation with us </h1>
+    <p style="margin-left: 20%; width: 300px; text-align: center;">we will provide you the best we can and help you as much as we can and also we have the best results till date.</p>
+    <a href="/login_signup/">
+        <button type="submit" value="Start now" style="background-color: #9e9999; height: 6vh; margin-left: 30%; width: 30%; border-radius: 50px;">start now</button>
+    </a>
+</div>
+<div class="maincrd">
+    {% for i in data3 %}
+    <div class="crd">
+        <div style="width: 100%; height: 70%;">
+            <img id="img" src="{% static 'images/' %}{{i.img2.name}}" style="object-fit: cover;" > 
+        </div>
+        <div style="object-fit: cover;">
+            <h1>{{i.heading1}}</h1>
+            <p>{{i.para1}}</p>
+        </div>
+        
+    </div>
+    {% endfor %}
+</div>
+<div>
+    <h1 style="color: red; text-align: center; margin-bottom: 1px; margin-top: 9%;" class="celeb">Celebrating The Toppers Of Br@inboo$t Community</h1>
+
+    <h1 style=" text-align: center; padding: 2%;">OUR 2024 TOPPERS  </h1>
+</div>
+
+<div class="topperscard">
+    {% for x in data1 %}
+    <div class="card">
+        <img id="img" src="{% static 'images/' %}{{x.image1.name}}" > 
+        <p id="heading2">{{x.text}}</p>           
+    </div>  
+    {% endfor %}      
+</div>
+
+{% endblock %}

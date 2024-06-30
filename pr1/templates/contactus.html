@@ -1,0 +1,84 @@
+{% extends "base.html" %} 
+
+{% block start %}
+{% load static %}
+<div class="bodycontact">
+    
+    <section id="contact">
+
+        <h4 class="section-header">Contact us</h4>
+      
+        <div class="contact-wrapper">
+      
+          <!-- Left contact page -->
+      
+          <form action="/contact_us/" method="post" id="contact-form" class="form-horizontal" role="form">
+            {% csrf_token %}
+
+            <div class="form-group">
+              <div class="col-sm-12 p-2">
+                <input type="text" class="form-control" id="name" placeholder="NAME" name="name1" class="name1" value="" required>
+              </div>
+            </div>
+      
+            <div class="form-group">
+              <div class="col-sm-12 p-2">
+                <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email1" class="email1" value="" required>
+              </div>
+            </div>
+      
+            <textarea style="margin-top: 2%; ;" class="form-control" class="message" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+      
+            <button class="btn btn-primary send-button p-2" id="submit" type="submit" value="SEND">
+              <div class="alt-send-button">
+                <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+              </div>
+      
+            </button>
+      
+          </form>
+      
+          <!-- Left contact page -->
+      
+          <div class="direct-contact-container">
+      
+            <ul class="contact-list">
+                <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li>
+                                                                
+                <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail"><a href="mailto:#" title="Send me an email">chetna@gmail.com</a></span></i></li>
+        
+                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">City, State</span></i></li>
+      
+             
+            </ul>
+            <div>
+              <iframe src="https://maps.app.goo.gl/gjfbhkhTer9mDjMg6" width="500" height="350" style="border:0" allowfullscreen="" loading="lazy">      </iframe>
+            </div>
+      
+            <hr>
+            <!-- <ul class="social-media-list">
+              <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-github" aria-hidden="true"></i></a>
+              </li>
+              <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-codepen" aria-hidden="true"></i></a>
+              </li>
+              <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-twitter" aria-hidden="true"></i></a>
+              </li>
+              <li><a href="#" target="_blank" class="contact-icon">
+                  <i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+            <hr> -->
+      
+            <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+      
+          </div>
+      
+        </div>
+      
+      </section>
+</div>
+
+{% endblock %}

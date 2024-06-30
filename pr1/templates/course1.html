@@ -1,0 +1,33 @@
+{% extends "base.html" %} 
+
+{% block start %}
+{% load static %}
+<div class="koka row mx-auto">
+  <div class="koka1  d-flex flex-wrap col-9 ">
+{% for i in data13 %}
+
+    <div class="card">
+      <div class="face front">
+        <img src="{% static 'images/' %}{{i.image12}}">
+        <h3>{{i.name12}}</h3>
+      </div>
+      <div class="face back">
+      <h2>{{i.back_name1}}</h2>
+     
+        <h4><i class="fa-solid fa-graduation-cap"></i>{{i.text12}}</h4>
+        <H4 ><i class="fa-solid fa-book"></i> {{i.text13}}</H4>
+       
+        <h4 style="margin-right: 15%;"><i class="fa-regular fa-calendar-days"></i> {{i.text14}}   </h4>
+     
+      <div class="link">
+        
+          <a href="/courseupsc/{{i.name12 | slugify}}/{{i.id}}">Buy Course</a>
+        
+        
+      </div>
+    </div>
+  </div>
+
+    {% endfor %}
+  </div>
+  {% endblock %}

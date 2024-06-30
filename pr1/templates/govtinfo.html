@@ -1,0 +1,36 @@
+{% extends "base.html" %} 
+
+{% block start %}
+{% load static %}
+
+<h1 style="padding-top: 1%; text-align: center; font-size: 50px; font-family: Arial, Helvetica, sans-serif;">{{gdata.name12}}</h1>
+<h1 style="margin-top: 1%; margin-left: 2%;"> Syllabus</h1>
+<div style="text-align: start; margin-left: 3%; display: flex; justify-content: between; ">
+    <div style=" margin-left: 5%; margin-top: 2%; margin-bottom: 2%; padding-top: 2%; padding-bottom: 1%; padding-left: 2%; border: 1px solid black; border-radius: 25px; width: 45%; justify-content: center;">
+                
+        {{gdata.syllabus1 | unordered_list }}
+
+    </div>
+    <div style="padding-left: 20%;" >
+        <img src="{% static 'images/el.png' %}" style="height: 50vh; width: 35vh;">
+    </div>
+</div>
+        
+<div class="fullboxback" style="display: flex;align-items: start; margin-bottom: 2%; padding-left: 7%;">
+     <iframe style=" object-fit: cover; height: 42vh; width: 35%; border-radius: 7%; " src="{{gdata.text15}}" frameborder="0"></iframe>
+    
+    <div style="font-family: Arial, Helvetica, sans-serif; font-size: 17px; height: 40vh; width: 60%; margin-left: 4%; padding-top: 2%;" >{{gdata.description1}}</div>
+</div>
+<div class="fullboxback" style="display: flex;align-items: start; margin-bottom: 2%; padding-left: 7%;">
+    <iframe style=" object-fit: cover; height: 42vh; width: 35%; border-radius: 7%; " src="{{gdata.text16}}" frameborder="0"></iframe>
+   
+   <div style="font-family: Arial, Helvetica, sans-serif; font-size: 17px; height: 40vh; width: 60%; margin-left: 4%; padding-top: 2%;" >{{gdata.descriptionn1}}</div>
+</div>
+<div class="fullboxback" style="display: flex;align-items: start; margin-bottom: 2%; padding-left: 7%;">
+    <iframe style=" object-fit: cover; height: 42vh; width: 35%; border-radius: 7%; " src="{{gdata.text26}}" frameborder="0"></iframe>
+   
+   <div style="font-family: Arial, Helvetica, sans-serif; font-size: 17px; height: 40vh; width: 60%; margin-left: 4%; padding-top: 2%;" >{{gdata.descriptionn2}}</div>
+</div>
+
+    
+    {% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block start %}
+<div class="mainteach">
+    <div class="teachheadings">
+        <h1>COME TEACH WITH US</h1>
+        <H5>Become an instructor and change lives — including your own</H5>
+    </div>
+    
+</div>
+<h2 id="teachh">So many reasons to start</h2>
+<div class="maintdiv">
+{% for i in tdata %}
+    <div class="teach1">
+        <div class="timgdiv">
+            <img id="Timg" src="{% static 'images/' %}{{i.img1.name}}" > 
+        </div>
+        <h3>{{i.heading}}</h3>
+        <p>{{i.para}}</p>
+    </div>
+{% endfor %}
+
+</div>
+<div class="thhh">
+    <div id="tdiv">
+        <h1>62M</h1>
+        <h6>Students</h6>
+    </div>
+    <div id="tdiv">
+        <h1>75+</h1>
+        <h6>Languages</h6>
+    </div>
+    <div id="tdiv">
+        <h1>830M</h1>
+        <h6>Enrollments</h6>
+    </div>
+    <div id="tdiv">
+        <h1>80+</h1>
+        <h6>Countries</h6>
+    </div>
+    <div id="tdiv">
+        <h1>8000+</h1>
+        <h6>Enterprise customers</h6>
+    </div>
+</div>
+
+{% endblock %}
